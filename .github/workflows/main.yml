@@ -19,3 +19,6 @@ jobs:
           test -f style.css
           test -f script.js
           echo "Frontend files verified successfully!"
+
+      - name: Build Docker image
+        run: docker build -t campusconnect .
