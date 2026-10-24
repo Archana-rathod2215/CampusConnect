@@ -1,0 +1,21 @@
+name: CampusConnect CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify frontend files
+        run: |
+          test -f index.html
+          test -f style.css
+          test -f script.js
+          echo "Frontend files verified successfully!"
