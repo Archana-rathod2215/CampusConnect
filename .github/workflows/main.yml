@@ -20,5 +20,8 @@ jobs:
           test -f script.js
           echo "Frontend files verified successfully!"
 
+      - name: Automated Tests
+        run: node tests/app.test.js
+
       - name: Build Docker image
         run: docker build -t campusconnect .
