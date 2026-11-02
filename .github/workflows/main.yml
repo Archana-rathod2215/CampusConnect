@@ -32,4 +32,4 @@ jobs:
           exit-code: '1'  
 
       - name: Build Docker image
-        run: docker build -t campusconnect .
+        run: docker build -t campusconnect:v1 .
